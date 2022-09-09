@@ -1,0 +1,410 @@
+div.dc-chart {
+    float: left;
+    text-align: center;
+}
+
+.dc-chart rect.bar {
+    stroke: none;
+    cursor: pointer;
+}
+
+.dc-chart rect.bar:hover {
+    fill-opacity: .5;
+}
+
+.dc-chart rect.stack1 {
+    stroke: none;
+    fill: red;
+}
+
+.dc-chart rect.stack2 {
+    stroke: none;
+    fill: green;
+}
+
+.dc-chart rect.deselected {
+    stroke: none;
+    fill: #ccc;
+}
+
+.dc-chart .pie-slice {
+    fill: black;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dc-chart .pie-slice :hover {
+    fill-opacity: .4;
+}
+
+.dc-chart .selected path {
+    stroke-width: 3;
+    stroke: #ccc;
+    fill-opacity: 1;
+}
+
+.dc-chart .deselected path {
+    stroke: none;
+    fill-opacity: .5;
+    fill: #ccc;
+}
+
+.dc-chart .axis path, .axis line {
+    fill: none;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+}
+
+.dc-chart .axis text {
+    font:  300 12px "Futura", sans-serif;
+    fill: #525252;
+}
+
+.dc-chart .x.axis text {
+    font:  200 12px "Futura", sans-serif;
+    text-anchor: end;
+}
+
+.dc-chart .grid-line {
+    fill: none;
+    stroke: #ccc;
+    opacity: .5;
+    shape-rendering: crispEdges;
+}
+
+.dc-chart .grid-line line {
+    fill: none;
+    stroke: #ccc;
+    opacity: .5;
+    shape-rendering: crispEdges;
+}
+
+.dc-chart .brush rect.background {
+    z-index: -999;
+}
+
+.dc-chart .brush rect.extent {
+    fill: steelblue;
+    fill-opacity: .125;
+}
+
+.dc-chart .brush .resize path {
+    fill: #eee;
+    stroke: #666;
+}
+
+.dc-chart path.line {
+    fill: none;
+    stroke-width: 1.5px;
+}
+
+.dc-chart circle.dot {
+    stroke: none;
+}
+
+.dc-chart g.dc-tooltip path {
+    fill: none;
+    stroke: grey;
+    stroke-opacity: .8;
+}
+
+.dc-chart path.area {
+    fill-opacity: .3;
+    stroke: none;
+}
+
+.dc-chart .node {
+    font-size: 0.7em;
+    cursor: pointer;
+}
+
+.dc-chart .node :hover {
+    fill-opacity: .8;
+}
+
+.dc-chart .selected circle {
+    stroke-width: 3;
+    stroke: #ccc;
+    fill-opacity: 1;
+}
+
+.dc-chart .deselected circle {
+    stroke: none;
+    fill-opacity: .5;
+    fill: #ccc;
+	stroke-width: 1.5px;
+}
+
+.bubble {font-size:18px;}
+
+.dc-chart .bubble {
+    stroke: #999999;
+    fill-opacity: 0.9;
+	stroke-width: 1px;
+	text-size:26px; 
+}
+
+/* .bubble-overlay.bubble{
+stroke: #999999;
+    fill-opacity: 0.6;
+	stroke-width: 4.5px;
+
+} */
+
+.dc-data-count {
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+    font:  300 12px "Futura", sans-serif;
+}
+.dc-chart .pie{margin-left:40px;}
+.dc-data-count .filter-count {
+    color: #3182bd;
+    font-weight: bold;
+}
+
+.dc-data-count .total-count {
+    color: #3182bd;
+    font-weight: bold;
+}
+
+.dc-data-table {
+    font:  300 12px "Futura", sans-serif;
+    fill: #525252;
+    width: 800px;
+}
+
+.dc-data-table th {
+    font:  300 14px "Futura", sans-serif;
+    fill: #525252;
+    text-align: right;
+
+}
+
+.dc-table-column._0
+{
+    text-align: right;
+}
+
+.dc-table-column._1
+{
+    text-align: right;
+}
+
+.dc-table-column._2
+{
+    text-align: right;
+}
+
+.dc-table-label {
+    background-color: #d9edf7;  
+
+}
+
+.dc-chart g.state {
+    cursor: pointer;
+}
+
+.dc-chart g.state :hover {
+    fill-opacity: .8;
+}
+
+.dc-chart g.state path {
+    stroke: white;
+}
+
+.dc-chart g.selected path {
+}
+
+.dc-chart g.deselected path {
+    fill: grey;
+}
+
+.dc-chart g.selected text {
+}
+
+.dc-chart g.deselected text {
+    display: none;
+}
+
+.dc-chart g.county path {
+    stroke: white;
+    fill: none;
+}
+
+.dc-chart g.debug rect {
+    fill: blue;
+    fill-opacity: .2;
+}
+
+.dc-chart g.row rect {
+    fill-opacity: 0.8;
+    cursor: pointer;
+}
+
+.dc-chart g.row rect:hover {
+    fill-opacity: 0.4;
+}
+
+.dc-chart g.row text {
+    fill: #525252;
+    font:  200 12px "Futura", sans-serif;
+    cursor: pointer;
+}
+
+.dc-legend {
+    font-size: 11px;
+}
+
+.dc-legend-item {
+    cursor: pointer;
+}
+
+.dc-chart g.axis text {
+    /* Makes it so the user can't accidentally click and select text that is meant as a label only */
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10 */
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.dc-chart path.highlight {
+    stroke-width: 3;
+    fill-opacity: 1;
+    stroke-opacity: 1;
+}
+
+.dc-chart .highlight {
+    fill-opacity: 1;
+    stroke-opacity: 1;
+}
+
+.dc-chart .fadeout {
+    fill-opacity: 0.2;
+    stroke-opacity: 0.2;
+}
+
+.dc-chart path.dc-symbol {
+    fill-opacity: 0.5;
+    stroke-opacity: 0.5;
+}
+
+.dc-hard .number-display {
+    float: none;
+}
+.KEN { fill: #ffffff; }
+.UGA { fill: #ffffff; }
+.SOM { fill: #ffffff; }
+.ETH { fill: #ffffff; }
+.SSD { fill: #ffffff; }
+.BRN { fill: #ffffff; }
+.RWA { fill: #ffffff; }
+.SDN { fill: #ffffff; }
+.ERI { fill: #ffffff; }
+.DJI { fill: #ffffff; }
+
+
+.SERVERE { fill: #C80000; }
+.GREEN { fill: #B6EF9B; }
+.STRESSED { fill: #FAE61E; }
+.BAD { fill: #E67800; }
+.EASY { fill: #DCF0DC; }
+.WATER { fill: #96DCF0; }
+
+
+
+.Acholi	{fill:#FFE6E6;}
+.Addis-Ababa	{fill:#FFE6E6;}
+.Adjumani	{fill:#FFE6E6;}
+.Anseba	{fill:#FFE6E6;}
+.Awdal	{fill:#FFE6E6;}
+.Bahr-elGhazal	{fill:#FFE6E6;}
+.Bakool	{fill:#800000;}
+.Banaadir	{fill:#330000;}
+.Bari	{fill:#FF0000;}
+.Bay	{fill:#CC0000;}
+.Bay 	{fill:#FFCCCC;}
+.Blue-Nile	{fill:#FF3333;}
+.Bubanza	{fill:#FFE6E6;}
+.Bujumbura	{fill:#FFE6E6;}
+.Bujumbura-Mairie	{fill:#FF0000;}
+.Bururi	{fill:#FFE6E6;}
+.Central	{fill:#FFCCCC;}
+.Central 1	{fill:#FFCCCC;}
+.Central 2	{fill:#FFE6E6;}
+.Central-Equatoria	{fill:#FF3333;}
+.Cibitoke	{fill:#FFE6E6;}
+.Coast	{fill:#FFCCCC;}
+.Cyangugu	{fill:#FFE6E6;}
+.Central-Darfur{fill:#FF0000;}
+.East-Darfur	{fill:#FFCCCC;}
+.North-Darfur	{fill:#330000;}
+.South-Darfur	{fill:#4C0000;}
+.West-Darfur	{fill:#800000;}
+.Debub	{fill:#FFE6E6;}
+.East-Central	{fill:#FFE6E6;}
+.Eastern	{fill:#FFCCCC;}
+.Eastern-Equatoria	{fill:#FFE6E6;}
+.Equatoria	{fill:#FFE6E6;}
+.Galguduud	{fill:#FF3333;}
+.Gash-Barka	{fill:#FFE6E6;}
+.Gedo	{fill:#FF3333;}
+.Gitega	{fill:#FFE6E6;}
+.Hiiraan	{fill:#800000;}
+.Jonglei	{fill:#FF3333;}
+.Jubbada-Dhexe	{fill:#FFE6E6;}
+.Jubbada-Hoose	{fill:#660000;}
+.Jungoli	{fill:#FFE6E6;}
+.KARAMOJA	{fill:#FFE6E6;}
+.Kassala	{fill:#FFE6E6;}
+.Kayanza	{fill:#FFE6E6;}
+.Khartoum	{fill:#FF0000;}
+.Kigali	{fill:#FFE6E6;}
+.Kirundo	{fill:#FFE6E6;}
+.South-Kordofan	{fill:#4C0000;}
+.North-Kordofan	{fill:#FFE6E6;}
+.Lakes	{fill:#FFCCCC;}
+.Lango	{fill:#FFE6E6;}
+.Makamba	{fill:#FFE6E6;}
+.Mudug	{fill:#FF0000;}
+.Muyinga	{fill:#FFE6E6;}
+
+.North-Eastern	{fill:#FFE6E6;}
+.Northern	{fill:#FFE6E6;}
+.Northern-Bahr-el-Ghazal	{fill:#FFE6E6;}
+.Nugaal	{fill:#FFCCCC;}
+.Nyanza	{fill:#FFCCCC;}
+
+.Rulindo  	{fill:#FFE6E6;}
+.Ruyigi	{fill:#FFE6E6;}
+.Sanaag	{fill:#FFCCCC;}
+.Sanaag 	{fill:#FFE6E6;}
+.Shabelle-D	{fill:#FFE6E6;}
+.Shabelle-H	{fill:#330000;}
+.Sool	{fill:#FFCCCC;}
+.Sool 	{fill:#FFE6E6;}
+.South-Western	{fill:#FFE6E6;}
+.Sudan	{fill:#FFE6E6;}
+.Garissa{fill:#FFE6E6;}
+
+.Mandera{fill:#FFE6E6;}
+
+.Wajir{fill:#FFE6E6;}
+
+.Lamu{fill:#FFE6E6;}
+
+
+
+.Togdheer	{fill:#FF3333;}
+.Unity	{fill:#CC0000;}
+.Upper-Nile	{fill:#660000;}
+.Warrap	{fill:#FFCCCC;}
+.West-Equatoria	{fill:#FFE6E6;}
+.West.Nile	{fill:#FFE6E6;}
+.Western	{fill:#FF3333;}
+.Western-Bahr-el-Ghazal	{fill:#FFCCCC;}
+.Western-Equatoria	{fill:#FFE6E6;}
+.Woqooyi-Galbeed	{fill:#FFCCCC;}
+
