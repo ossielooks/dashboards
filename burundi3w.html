@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<meta charset="utf-8">
+	<title>OCHA ROEA</title>
+	
+	<!-- Main Stylesheet -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/font-humanitarian.css">
+	<link rel="stylesheet" href="assets/css/templatemo-style.css">
+	<link href="assets/cs/custom-styles.css" rel="stylesheet" />
+	<link href="assets/css/introjs.css" rel="stylesheet" />
+	<link href="assets/css/dc.css" rel="stylesheet" />
+
+	<!-- jQuery -->
+	<!-- <script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script> -->
+
+</head>
+<body>
+		
+	<!-- HEADER -->
+	<div class="fluid-container">
+		<header class="site-header">
+			<div class="navbar-default">
+				<div class="fluid-container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand" href="#"><img src="assets/img/ocha_logo.png" style="width:217px; " alt="Ocha"></img></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="link-service" href="index.html">DASHBOARD</a></li>
+						<li><a class="link-contact" href="burundi3w.html">Burundi 3w</a></li>
+						<li><a class="link-clients" href="burundiconflict.html">Burundi Conflict</a></li>
+						
+					</ul>
+				</div>
+				</div>
+			</div>
+		</header> <!-- .site-header -->
+	</div> <!-- .fluid-container -->
+	
+	<!-- WELCOME TEXT -->
+	<div class="main-content">
+	<div class="fluid-container">
+		<div class="section-welcome">			 <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            BURUNDI <small>Who is Doing What Where as of 14 June</small> 
+							<!-- <a class="reset btn btn-primary btn-sm" style="float:right;" id="reset" href="javascript:dc.filterAll(); foodsecurity.filter(2015); dc.redrawAll();">Reset All</a> &nbsp; &nbsp;
+							<a class="reset btn btn-primary btn-sm" style="float:right;" id="reset" href="assets/data/fundingD.csv">Download Data</a>&nbsp; &nbsp;&nbsp; &nbsp; -->
+                        </h1>
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+				 <div class="row" >
+				 <a class="btn btn btn-success" style="float:right; margin-bottom:20px; margin-right:10px;" href="javascript:void(0);" onclick="javascript:introJs().start();">ABOUT</a>
+				 <a class="reset btn btn-primary btn-sm" style="float:right; margin-bottom:20px; margin-right:10px;" id="reset" href="javascript:dc.filterAll(); dc.redrawAll();">Reset All</a> &nbsp; &nbsp;
+							<a class="reset btn btn-primary btn-sm" style="float:right; margin-bottom:20px; margin-right:10px; " id="reset" href="assets/data/burundi3w.csv">Download Data</a>&nbsp; &nbsp;&nbsp; &nbsp;
+							
+                    </div>
+					
+             
+			 
+				 
+				<div class="row">				
+					
+					<div class="col-md-5 col-sm-6 col-xs-12" data-step="1" data-intro="Map showing the density of Humanitarian actors by activity by  province. The darker shades show a higher presence of humanitarian Actors. Click on any shape to filter the rest of charts" data-position="right">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Density of Actors by Province
+                            </div>
+                            <div class="panel-body">
+                                <div id="where"></div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-md-7 col-sm-6 col-xs-12" >
+					<div class="col-md-6 col-sm-6 col-xs-12" data-step="2" data-intro="Pie showing the type of actors. Click on the pie to interact with the data" data-position="left">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Type of Actor								
+                            </div>
+                            <div class="panel-body">
+                                <div id="type">
+								</div>
+								<!-- <div id="timefilter"></div> -->
+                            </div>
+                        </div>
+                    </div>
+					
+					<div class="col-md-6 col-sm-6 col-xs-12" data-step="3" data-intro="Sectors that are addressed by the Humanitarian actors. Click on the chart to interact with the data" data-position="left">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                               Sector
+                            </div>
+                            <div class="panel-body">
+                                <div id="what"></div>
+								
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-md-12 col-sm-6 col-xs-12" data-step="4" data-intro="The Humanitarian actors/organizations doing work in Burundi. Click on the chart to interact with the data" data-position="left">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                               Organizations (Actors)
+                            </div>
+                            <div class="panel-body">
+                                <div id="who"></div>
+								
+                            </div>
+                        </div>
+                    </div>
+					
+					</div>
+
+
+
+
+					
+				 </div> 
+					 
+				
+					 
+					 
+				
+			   
+
+    </div>
+
+
+			   <div class="fluid-container">
+		<footer class="site-footer">
+			<a href="#" class="back-to-top">
+				<i class="fa fa-angle-up"></i>
+			</a>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-left-0">
+					<p class="copyright">Humanitarian Dashboard: <a href="http://ea.humanitarianresponse.info" target="_parent">UNOCHA - EASTERN AFRICA</a></p>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-right-0">
+					<ul class="social">
+						<!-- <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i> Youtube</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+			   </div>
+                <!-- /. ROW  -->
+        </div>
+              
+    </div>
+	
+             <!-- /. PAGE INNER  -->
+            
+         <!-- /. PAGE WRAPPER  -->
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+	
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     
+	<script src="assets/js/jquery-ui.min.js"></script> 
+	<script type="text/javascript" src="assets/js/d3.min.js"></script>
+		<script type="text/javascript" src="assets/js/crossfilter.js"></script>
+		<script type="text/javascript" src="assets/js/dc.js"></script>
+		<script type="text/javascript" src="assets/js/dc_002.js"></script>
+		<script type="text/javascript" src="assets/js/d3.tip.min.js"></script>
+		<script type="text/javascript" src="assets/app/burundi3w.js"></script>
+		<script type="text/javascript" src="assets/data/earegionsvg.js"></script>
+		<script type="text/javascript" src="assets/js/intro.js"></script>
+		<script type="text/javascript" src="assets/data/fs201501.js"></script>
+		<script type="text/javascript" src="assets/js/leaflet.js"></script>
+		
+		
+		
+		<script type="text/javascript" src="assets/js/dc.leaflet.js"></script>
+		
+		
+		<!--Optional-->
+		<script type="text/javascript" src="assets/js/leaflet.markercluster.js"></script>
+
+		
+
+		<!-- <script src="assets/js/jquery.js"></script> -->
+		
+		<!-- <script src="assets/js/jquery.js"></script> -->
+    
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+   
+</body>
+</html>
+</body>
+</html>
+

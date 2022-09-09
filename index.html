@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<meta charset="utf-8">
+	<title>OCHA ROEA</title>
+	
+	<!-- Main Stylesheet -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/font-humanitarian.css">
+	<link rel="stylesheet" href="assets/css/templatemo-style.css">
+	<link href="assets/cs/custom-styles.css" rel="stylesheet" />
+	<link href="assets/css/introjs.css" rel="stylesheet" />
+	<link href="assets/css/dc.css" rel="stylesheet" />
+
+	<!-- jQuery -->
+	<!-- <script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script> -->
+
+</head>
+<body>
+		
+	<!-- HEADER -->
+	<div class="fluid-container">
+		<header class="site-header">
+			<div class="navbar-default">
+				<div class="fluid-container">
+				<div class="navbar-header">
+				
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+					
+					<a class="navbar-brand" href="#"><img src="assets/img/ocha_logo.png" style="width:217px; " alt="Ocha"></img></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="link-contact" href="index.html">DASHBOARD</a></li>
+						<!-- <li><a class="link-facts" class="active-menu" href="kenya-resilience.html">KENYA RESILIENCE</a></li>
+						<li><a class="link-portfolio" href="inform.html">INFORM</a></li>  -->
+						<!-- <li><a class="link-clients" href="burundi3w.html">Burundi 3w</a></li>
+						<li><a class="link-clients" href="burundiconflict.html">Burundi Conflict</a></li> --> 
+					</ul>
+				</div>
+				</div>
+			</div>
+		</header> <!-- .site-header -->
+	</div> <!-- .fluid-container -->
+	
+	<!-- WELCOME TEXT -->
+	<div class="main-content">
+	<div class="fluid-container">
+		<div class="section-welcome">
+			<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Eastern Africa <small>Dashboard</small>  <a class="btn btn btn-success" style="float:right; margin-bottom:20px; margin-right:10px;" href="javascript:void(0);" onclick="javascript:introJs().start();">About</a>
+				 <a class="reset btn btn-primary btn-sm" style="float:right; margin-bottom:20px; margin-right:10px;" id="reset" href="javascript:dc.filterAll(); foodsecurity.filter(2016); dc.redrawAll();">Reset All</a> &nbsp; &nbsp;
+							<a class="reset btn btn-primary btn-sm" style="float:right; margin-bottom:20px; margin-right:10px; " id="reset" href="https://data.hdx.rwlabs.org/dataset/humanitarian-data-for-eastern-africa-region">Download Data</a>&nbsp; &nbsp;&nbsp; &nbsp;
+							<!-- <a class="reset btn btn-primary btn-sm" style="float:right;" id="reset" href="javascript:dc.filterAll(); foodsecurity.filter(2015); dc.redrawAll();">Reset All</a> &nbsp; &nbsp;
+							<a class="reset btn btn-primary btn-sm" style="float:right;" id="reset" href="assets/data/fundingD.csv">Download Data</a>&nbsp; &nbsp;&nbsp; &nbsp; -->
+                        </h1>
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+				 
+				<!--  <div class="row">
+				 <script>
+function setColor(btn, color){
+    var count=1;
+    var property = document.getElementById(butn);
+    if (count == 0){
+        property.style.backgroundColor = "#FFFFFF"
+        count=1;        
+    }
+    else{
+        property.style.backgroundColor = "#7FFF00"
+        count=0;
+    }
+
+}
+</script>
+
+				 
+				 <a class="reset" id="butn" style="float:left; margin-bottom:10px; margin-left:20px;margin-right:2px;" onclick='javascript: fundingChart.filter("SSD");  dc.renderAll();'>South Sudan</a>
+				 <a class="reset btn btn-primary btn-sm" id="btn" style="float:left; margin-bottom:10px; margin-right:2px;" onclick='javascript:fundingChart.filter("SOM"); foodsecurity.filter(2015); dc.renderAll();' >Somalia</a>
+				 <a class="reset btn btn-primary btn-sm" id="btn" style="float:left; margin-bottom:10px; margin-right:2px;" onclick='javascript:dc.filterAll(); fundingChart.filter("SDN"); dc.renderAll(); ' >Sudan</a>
+				 <a class="reset btn btn-primary btn-sm" id="btn" style="float:left; margin-bottom:10px; margin-right:2px;" onclick='javascript: fundingChart.filter("BUR"); dc.renderAll();' >Burundi</a>
+				 <a class="reset btn btn-primary btn-sm" style="float:left; margin-bottom:10px; margin-right:2px;" onclick='javascript: fundingChart.filter("ETH"); dc.renderAll();' >Ethiopia</a>
+				 <a class="reset btn btn-primary btn-sm" style="float:left; margin-bottom:10px; margin-right:2px;" onclick='javascript: fundingChart.filter("KEN"); dc.renderAll();' >Kenya</a>
+				 <a class="reset btn btn-primary btn-sm" style="float:left; margin-bottom:10px; margin-right:2px;" onclick='javascript: fundingChart.filter("UGA"); dc.renderAll();' >Uganda</a>
+				 <a class="reset btn btn-primary btn-sm" style="float:left; margin-bottom:10px; margin-right:2px;" onclick='javascript: fundingChart.filter("RWA"); dc.renderAll();' >Rwanda</a>
+				 <a class="reset btn btn-primary btn-sm" style="float:left; margin-bottom:10px; margin-right:2px;" onclick='javascript: fundingChart.filter("DJI"); dc.renderAll();' >Djibouti</a> -->
+				 
+				 <div class="row"> 
+				 <small> Filter by Year</small><span>
+				  <a class="btn btn btn-success" style="float:left; margin-bottom:20px; margin-right:10px;" href='javascript:dc.filterAll(); refugeeidpChart.filter("2011");  dc.redrawAll();' >2011</a>
+				 <a class="btn btn btn-success" style="float:left; margin-bottom:20px; margin-right:10px;"  href='javascript:dc.filterAll(); oc("2012");' >2012</a>
+				 <a class="btn btn btn-success" style="float:left; margin-bottom:20px; margin-right:10px;"  href='javascript:dc.filterAll(); refugeeidpChart.filter("2013"); dc.renderAll();' >2013</a>
+				 <a class="btn btn btn-success" style="float:left; margin-bottom:20px; margin-right:10px;"  href='javascript:dc.filterAll(); refugeeidpChart.filter("2014"); dc.renderAll();' >2014</a>
+				 <a class="btn btn btn-success" style="float:left; margin-bottom:20px; margin-right:10px;"  href='javascript:dc.filterAll(); refugeeidpChart.filter("2015"); dc.renderAll();' >2015</a>
+				 <a class="btn btn btn-success" style="float:left; margin-bottom:20px; margin-right:10px;"  href='javascript:dc.filterAll(); refugeeidpChart.filter("2016"); dc.renderAll(); dc.redrawAll();'  >2016</a> 
+				 </span>
+				 </div>
+				 
+				 
+					<div class="row"> 
+					
+                        
+                    <div class="col-md-3 col-sm-12 col-xs-12" data-step="1" data-intro="Total Funding Requested as per the selected year for the Eastern Africa Region" data-position="right">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <span class="fa fa-shopping-cart fa-5x"></span> -->
+                                <div  id="requested-figure">
+								<h3>$<span class="filter-count"></span> M</h3></div>
+  
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                              <div class = "smallfont">Requested <span class = smallerfont> <a href style='float:right;' data-toggle="modal" data-target="#myModalFunding">
+                              ?
+                            </a></span></h6></div>
+
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-md-2 col-sm-12 col-xs-12" data-step="2" data-intro="Total Funding Recieved as per the selected year for the Eastern Africa Region" data-position="right">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <span class="fa fa-shopping-cart fa-5x"></span> -->
+                                <div  id="funding-figure">
+								<h3>$<span class="filter-count"></span> M</h3></div>
+  
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                              <div class = "smallfont"> Funded <span class = smallerfont> <a href style='float:right;' data-toggle="modal" data-target="#myModalReceived">
+                              ?
+                            </a></span></h6></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12" data-step="3" data-intro="Total number of Refugees in the Eastern Africa Region" data-position="right">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <i class="fa fa fa-comments fa-5x"></i> -->
+                                <div  id="refugees-figure">
+								<h3><span class="filter-count"></span></h3></div>
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                                <div class = "smallfont"> Refugees<span class = smallerfont><a href style='float:right;' data-toggle="modal" data-target="#myModalrefugee">
+                              ?
+                            </a></span> </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12" data-step="4" data-intro="Total number of IDPs in the Eastern Africa Region " data-position="right">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <i class="fa fa-users fa-5x"></i> -->
+                                <div  id="idps-figure">
+								<h3><span class="filter-count"></span></h3></div>
+                            </div>
+                           <div class="panel-footer back-footer-blue">
+                               <div class = "smallfont"> IDPs<span class = smallerfont><a href style='float:right;' data-toggle="modal" data-target="#myModalidps">
+                              ?
+                            </a></span> </div>
+
+                            </div>
+                        </div>
+                    </div>
+					
+					<div class="col-md-3 col-sm-12 col-xs-12" data-step="5" data-intro="Total number of Food Insecure peoples in the Eastern Africa Region" data-position="left">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <i class="fa fa fa-comments fa-5x"></i> -->
+                                <div  id="fs-figure">
+								<h3><span class="filter-count"></span></h3></div>
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+							 
+                                <div class = "smallfont">Food Insecure <span class = smallerfont><a href style='float:right;' data-toggle="modal" data-target="#myModalfood">
+                              ?
+                            </a></span></div>
+
+                            </div>
+                        </div>
+                    </div>
+                                       
+					
+                </div>
+             
+			 
+				 <div class="row">
+				
+				
+				<div class="col-md-6 col-sm-6 col-xs-12" data-step="6" data-intro="Latest map of the food security situation of the region. the bubbles represent the total number of food insecure people in the per country click on the bubbles to interact with the data" data-position="right">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Food Insecure People <a href style='float:right;' data-toggle="modal" data-target="#myModalfoodnumbers">
+                              ?
+                            </a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="foodsec-bubbles"> <svg height="425px" width="450px"> </svg>
+                                    
+                                    
+									
+										<!-- <div class='my-legend'> -->
+										<!-- <div class='legend-title'>The Title or Explanation of your Map</div> -->
+										<!-- <div class='legend-scale'>
+										  <ul class='legend-labels'>
+											<li><span style='background:#DEF7DE;'></span>Minimal</li>
+											<li><span style='background:#FFE718;'></span>Stressed</li>
+											<li><span style='background:#E77B00;'></span>Crisis</li>
+											<li><span style='background:#CE0000;'></span>Emergency</li>
+											<li><span style='background:#630000;'></span>Famine</li>
+										  </ul>
+										</div>
+										<div class='legend-source'>Source:<a href="www.fews.net">FEWS NET</a></div>
+										</div> -->
+										</div>
+										
+                            </div>
+							
+										
+				<div class="modal fade" id="myModalfoodnumbers" tabindex="-1" role="dialog" aria-labelledby="myModalLabelfood" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelfood">FOOD SECURITY outlook</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: April 2016
+											Source: <a href="fews.net">FEWSNET</a>, <a href="http://www.disasterriskreduction.net/east-central-africa/fsnwg">FSNWG</a> </br>
+											The map is the ipc map for the horn of Africa region, Jan - April 2016 </br>
+											The bubbles and figures in them represents the food insecure persons under IPC 3 and IPC 4 in the horn of Africa region</br>
+											
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="modal fade" id="myModalfoodsec" tabindex="-1" role="dialog" aria-labelledby="myModalLabelFunding" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelFunding">Food security situation</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: March 2016</br>
+											Sources: <a href="http://ftsbeta.unocha.org">Financial Tracking Service</a></br>
+											This chart shows the funding received versus the requested amount</br>
+											
+											
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+							<div id="foodtrend"> </div>
+                    </div>
+					
+                <div class="col-md-6 col-sm-6" data-step="7" data-intro="Maps of Hazards, Vulnerability, Lack of Coping Capacity and the overall humanitarian risk for the region. The severity scale is from 0 - 10. Click on the Charts to interact with the data" data-position="left">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+						Humanitarian  <a href style='float:right;' data-toggle="modal" data-target="#myModalfood">
+                              ?
+                            </a>
+						</div>
+						
+                            <ul class="nav nav-tabs">
+                                <li class=""><a href="#hazards" data-toggle="tab">Hazards</a>
+                                </li>
+                                <li class=""><a href="#vulnerability" data-toggle="tab">Vulnerability</a>
+                                </li>
+                                <li class=""><a href="#coping-capacity" data-toggle="tab">Lack of C.Capacity</a>
+                                </li>
+                                <li class="active"><a href="#inform-risk" data-toggle="tab">Overall Risk</a>
+                                </li>
+								<li class=""><a href="#risktrend" data-toggle="tab">Trend</a>
+                                </li>
+								
+                            </ul>
+                        
+                        <div class="panel-body">
+                            
+
+                            <div class="tab-content">
+							
+                                <div class="tab-pane fade" id="hazards">
+                                    <div class="hazards"> </div>
+									<div class='my-legend2'>
+									<div class='legend-scale2'>
+										  <ul class='legend-labels2'>
+											<li><span style='background:#FFE0B2;'></span>1-2</li>
+											<li><span style='background:#FFCC80;'></span>2-3</li>
+											<li><span style='background:#FFB84D;'></span>3-4</li>
+											<li><span style='background:#FFA319;'></span>4-5</li>
+											<li><span style='background:#E68A00;'></span>5-6</li>
+											<li><span style='background:#CC7A00;'></span>6-7</li>
+											<li><span style='background:#B26B00;'></span>7-8</li>
+											<li><span style='background:#995C00;'></span>8-9</li>
+											<li><span style='background:#804C00;'></span>9-10</li>
+										  </ul>
+										</div>
+										</div>
+                                     </div>
+                                <div class="tab-pane fade" id="vulnerability" >
+                                    <div class="vulnerability"> </div>
+									<div class='my-legend2'>
+									<div class='legend-scale2'>
+										  <ul class='legend-labels2'>
+											<li><span style='background:#CCE0FF;'></span>1-2</li>
+											<li><span style='background:#80B2FF;'></span>2-3</li>
+											<li><span style='background:#4D94FF;'></span>3-4</li>
+											<li><span style='background:#1975FF;'></span>4-5</li>
+											<li><span style='background:#005CE6;'></span>5-6</li>
+											<li><span style='background:#0047B2;'></span>6-7</li>
+											<li><span style='background:#003380;'></span>7-8</li>
+											<li><span style='background:#001F4C;'></span>8-9</li>
+											<li><span style='background:#001433;'></span>9-10</li>
+										  </ul>
+										</div>
+										</div>
+                                     </div>
+                                <div class="tab-pane fade" id="coping-capacity">
+                                    <div class="coping-capacity"> </div>
+									<div class='my-legend2'>
+									<div class='legend-scale2'>
+										  <ul class='legend-labels2'>
+											<li><span style='background:#E6F0E6;'></span>1-2</li>
+											<li><span style='background:#CCE0CC;'></span>2-3</li>
+											<li><span style='background:#99C299;'></span>3-4</li>
+											<li><span style='background:#66A366;'></span>4-5</li>
+											<li><span style='background:#338533;'></span>5-6</li>
+											<li><span style='background:#006600;'></span>6-7</li>
+											<li><span style='background:#005C00;'></span>7-8</li>
+											<li><span style='background:#005200;'></span>8-9</li>
+											<li><span style='background:#003300;'></span>9-10</li>
+										  </ul>
+										</div>
+										</div>
+                                     </div>
+                                <div class="tab-pane fade active in" id="inform-risk">
+								<div class="inform-risk">
+									</div>
+									<div class='my-legend2'>
+										<!-- <div class='legend-title'>The Title or Explanation of your Map</div> -->
+										<div class='legend-scale2'>
+										  <ul class='legend-labels2'>
+											<li><span style='background:#FFCCCC;'></span>1-2</li>
+											<li><span style='background:#FF9999;'></span>2-3</li>
+											<li><span style='background:#FF6666;'></span>3-4</li>
+											<li><span style='background:#FF3333;'></span>4-5</li>
+											<li><span style='background:#FF0000;'></span>5-6</li>
+											<li><span style='background:#CC0000;'></span>6-7</li>
+											<li><span style='background:#990000;'></span>7-8</li>
+											<li><span style='background:#660000;'></span>8-9</li>
+											<li><span style='background:#330000;'></span>9-10</li>
+										  </ul>
+										</div>
+										</div>								
+                            </div>
+							<div class="tab-pane fade" id="risktrend" >
+                                    <div class="risktrend"> </div>
+							
+							
+                        </div>
+                    </div>
+                </div>
+				 </div>
+				 </div>
+										
+					
+				
+				<div class="row">				
+					
+					<div class="col-md-6 col-sm-6 col-xs-12" data-step="8" data-intro="This chart shows the funding received versus the requested amount. Click on the Charts to interact with the data " data-position="right">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Funding by Country <a href style='float:right;' data-toggle="modal" data-target="#myModalfundingb">
+                              ?
+                            </a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="funding"></div>
+                            </div>
+                        </div>
+						
+						<div class="modal fade" id="myModalfundingb" tabindex="-1" role="dialog" aria-labelledby="myModalLabelFunding" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelFunding">Funding by country</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: March 2016</br>
+											Sources: <a href="http://ftsbeta.unocha.org">Financial Tracking Service</a></br>
+											This chart shows the funding received versus the requested amount</br>
+											
+											
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+					<div class="col-md-6 col-sm-6 col-xs-12" data-step="9" data-intro="This chart shows the trend in funding and highlights the funding gaps trend. Click on any country on the maps above to see the country specific funding trend. You can also click on this funding trend chart to filter funding by year" data-position="left">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                               Funding Trend <a href style='float:right;' data-toggle="modal" data-target="#myModalfundingt">
+                              ?
+                            </a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="fundingGap"></div>
+								
+                            </div>
+                        </div>
+						
+						
+						<div class="modal fade" id="myModalfundingt" tabindex="-1" role="dialog" aria-labelledby="myModalLabelFunding" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelFunding">Funding Trend</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: March 2016</br>
+											Sources: <a href="http://ftsbeta.unocha.org">Financial Tracking Service</a></br>
+											This chart shows the trend in funding and highlights the funding gaps trend</br>
+											Click on any country on the maps above to see the country specific funding trend</br>
+											
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>	
+                    </div>
+					<!-- <div class="col-md-6 col-sm-6 col-xs-12" data-step="8" data-intro="People in need by sector, drag the bar to filter all other charts by year" data-position="left">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                People in need by Sector								
+                            </div>
+                            <div class="panel-body">
+                                <div id="foodsecurity">
+								</div>
+								
+                            </div>
+                        </div>
+                    </div> -->
+					
+
+
+
+
+
+					
+				 </div> 
+					 
+					 
+					 
+					 
+				<div class="row">	
+					<div class="col-md-3 col-sm-6 col-xs-12" data-step="10" data-intro="total number of refugees by country by year. Click on the Charts to interact with the data" data-position="right">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Refugee by Country <a href style='float:right;' data-toggle="modal" data-target="#myModalref">
+                              ?
+                            </a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="refugee"></div>
+								
+                            </div>
+                        </div>
+						
+						<div class="modal fade" id="myModalref" tabindex="-1" role="dialog" aria-labelledby="myModalLabelFunding" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelFunding">REFUGEES BY COUNTRY</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: March 2016</br>
+											Sources: <a href="http://data.unhcr.org">UNHCR Data Portal</a></br>
+											This chart shows the number of refugees in the horn of Africa by country</br>
+											</br>
+											
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>	
+                    </div>
+					
+					<div class="col-md-3 col-sm-6 col-xs-12" data-step="11" data-intro="total number of IDPs by country by year. Click on the Charts to interact with the data" data-position="right">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                               IDP by Country  <a href style='float:right;' data-toggle="modal" data-target="#myModalidp">
+                              ?
+                            </a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="IDP"></div>
+								
+                            </div>
+                        </div>
+						<div class="modal fade" id="myModalidp" tabindex="-1" role="dialog" aria-labelledby="myModalLabelFunding" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelFunding">IDPs by Country</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: March 2016</br>
+											Sources: <a href="http://www.iom.int">IOM</a></br>
+											This chart shows the idp population by country in the horn of Africa over the years</br>
+																						
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>	
+                    </div>
+					
+					<!-- <div class="col-md-4 col-sm-6 col-xs-12" data-step="11" data-intro="total number of people in need by country by year. Click on the Charts to interact with the data" data-position="left">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                               Country: People in Need
+                            </div>
+                            <div class="panel-body">
+                                <div id="peopleinneed"></div>
+								
+                            </div>
+                        </div>
+                    </div> -->
+					
+					<div class="col-md-6 col-sm-6 col-xs-12" data-step="12" data-intro="total number of displaced people by country by year. Click on the Charts to interact with the data" data-position="left">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                               Displacement Trend <a href style='float:right;' data-toggle="modal" data-target="#myModaldisplacement">
+                              ?
+                            </a>
+                            </div>
+                            <div class="panel-body">
+                                <div id="displacementtrend"></div>
+								
+                            </div>
+                        </div>
+                    </div>
+					
+					 <div class="modal fade" id="myModaldisplacement" tabindex="-1" role="dialog" aria-labelledby="myModalLabelFunding" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelFunding">Displacement Trend</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: March 2016</br>
+											Sources: <a href="http://data.unhcr.org">UNHCR Data Portal</a>, <a href="http://www.iom.int">IOM</a></br>
+											This chart shows the trend in displacement i.e. Refugees and IDPs in the horn of Africa over the years</br>
+											Click on any country on the maps above to see the country specific trend of displacement</br>
+											
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>	
+					
+                     </div> 
+		
+<div class="row">
+                    <div class="col-md-6">
+                       
+                     <!--  Modals-->
+                    
+                     
+				 <div class="modal fade" id="myModalFunding" tabindex="-1" role="dialog" aria-labelledby="myModalLabelFunding" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelFunding">FUNDING REQUESTED</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: March 2016</br>
+											Source: <a href="http://fts.unocha.org">Ocha Financial Tracking Service (FTS)</a></br>
+											This figure indicates the total humanitarian funding requested.</br>
+											At present the figure for Sudan is missing as the HRP has not been finalized yet.</br>
+											Click on any country on the maps below to filter the specific amount the country requested</br>
+											
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>	
+
+				<div class="modal fade" id="myModalReceived" tabindex="-1" role="dialog" aria-labelledby="myModalLabelFunding" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+															<h4 class="modal-title" id="myModalLabelFunding">FUNDING RECEIVED</h4>
+														</div>
+														<div class="modal-body">
+															Last updated: March 2016</br>
+															Source: <a href="http://fts.unocha.org">Ocha Financial Tracking Service (FTS)</a></br>
+															This figure indicates the total humanitarian funding received.</br>
+															At present the figure for Sudan is missing as the HRP has not been finalized yet.</br>
+															Click on any country on the maps below to filter the specific amount the country received</br>
+															
+															</div>
+														 <div class="modal-footer">
+															<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+															
+														</div> 
+													</div>
+												</div>
+											</div>							
+					 
+				
+                <div class="modal fade" id="myModalrefugee" tabindex="-1" role="dialog" aria-labelledby="myModalLabelrefugee" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelrefugee">REFUGEE POPULATION</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: March 2016
+											Source: <a href="http://www.data.unhcr.org">UNHCR data portal</a>
+											This figure represents the total refugee population in the horn of Africa region</br>
+											Click on any country in the maps below to filter this figure to the refugees present in that country
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+							
+							
+				<div class="modal fade" id="myModalidps" tabindex="-1" role="dialog" aria-labelledby="myModalLabelidps" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelidp">INTERNALLY DISPLACED PERSONS</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: March 2016
+											Source: <a href="data.unhcr.org">FTS</a> ,<a href="http://www.iom.int">IOM</a>,<a href="http://www.unocha.org">UNOCHA</a></br>
+											This figure represents the total refugee population in the horn of Africa region</br>
+											Click on any country in the maps below to filter this figure to the internally displaced persons present in that country
+											
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+							
+							
+				<div class="modal fade" id="myModalfood" tabindex="-1" role="dialog" aria-labelledby="myModalLabelfood" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabelfood">FOOD SECURITY</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            Last updated: April 2016
+											Source: <a href="fews.net">FEWSNET</a>, <a href="http://www.disasterriskreduction.net/east-central-africa/fsnwg">FSNWG</a> </br>
+											The figure represents the food insecure persons under IPC 3 and IPC 4 in the horn of Africa region</br>
+											Click on any country in the maps below to filter this figure to the number of food insecure persons present in that country
+											</div>
+                                         <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+							<!-- End Modals-->
+				
+                    </div>
+                     <div class="col-md-12">
+                          <div class="panel panel-default">
+                        <div class="panel-heading">
+                            About the Dashboard
+                        </div>
+                        <div class="panel-body">
+                          This dashboard was compiled by UNOCHA-EA to visualize the humanitarian scenario of the Eastern Africa region. For comment/feedback please contact <a href>okombo@un.org</a>  While we try to keep the data
+						  as accurate and up to date as possible, some of the information may not be so much up to date. 
+                           
+                             </div>
+                              </div>
+                     </div>
+                </div>
+	</div>
+	</div>
+	<!-- FOOTER -->
+	<div class="fluid-container">
+		<footer class="site-footer">
+			<a href="#" class="back-to-top">
+				<i class="fa fa-angle-up"></i>
+			</a>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-left-0">
+					<p class="copyright">Humanitarian Dashboard: <a href="http://ea.humanitarianresponse.info" target="_parent">UNOCHA - EASTERN AFRICA</a></p>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-right-0">
+					<ul class="social">
+						<!-- <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i> Youtube</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+	</div>
+	
+
+	<!-- Plugins -->
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/plugins.js"></script>
+	
+	<script src="assets/js/jquery.min.js"></script> 
+		<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script> 
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/d3.min.js"></script>
+		<script type="text/javascript" src="assets/js/crossfilter.js"></script>
+		<script type="text/javascript" src="assets/js/dc.js"></script>
+		<script type="text/javascript" src="assets/js/d3.tip.min.js"></script>
+		<script type="text/javascript" src="assets/app/funding.js"></script>
+		<script type="text/javascript" src="assets/data/earegionsvg.js"></script>
+		<script type="text/javascript" src="assets/js/intro.js"></script>
+		<script type="text/javascript" src="assets/data/fs201501.js"></script>
+		
+	
+    
+
+</body>
+</html>

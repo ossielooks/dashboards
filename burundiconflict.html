@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<meta charset="utf-8">
+	<title>OCHA ROEA</title>
+	
+	<!-- Main Stylesheet -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="assets/css/dc.css"/>
+     <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Morris Chart Styles-->
+    
+	 <link href="assets/css/jquery-ui.min.css" rel="stylesheet" />
+        <!-- Custom Styles-->
+    
+	<link href="assets/css/introjs.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+     <!-- TABLE STYLES-->
+   
+	
+
+	<link type="text/css" href="assets/css/leaflet.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/templatemo-style.css" rel="stylesheet">
+	
+	
+	
+	<link type="text/css" href="assets/lib/leaflet.css" rel="stylesheet"/>
+	<link type="text/css" href="assets/lib/leaflet.markercluster.css" rel="stylesheet"/>
+
+	<link type="text/css" href="assets/lib/leaflet.css" rel="stylesheet"/>
+	<link type="text/css" href="assets/lib/leaflet.markercluster.css" rel="stylesheet"/>
+	<link type="text/css" href="assets/css/dc.css" rel="stylesheet"/>
+	
+
+</head>
+<body>
+		
+	<!-- HEADER -->
+	<div class="fluid-container">
+		<header class="site-header">
+			<div class="navbar-default">
+				<div class="fluid-container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand" href="#"><img src="assets/img/ocha_logo.png" style="width:217px; " alt="Ocha"></img></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="link-service" href="index.html">DASHBOARD</a></li>
+						<li><a class="link-service" href="burundi3w.html">Burundi 3w</a></li>
+						<li><a class="link-contact" href="burundiconflict.html">Burundi Conflict</a></li>
+					</ul>
+				</div>
+				</div>
+			</div>
+		</header> <!-- .site-header -->
+	</div> <!-- .fluid-container -->
+	
+	<!-- WELCOME TEXT -->
+	<div class="main-content">
+	<div class="fluid-container">
+		<div class="section-welcome">
+			
+			 <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            BURUNDI <small>Violent events since 01 January 2015</small> 
+							<!-- <a class="reset btn btn-primary btn-sm" style="float:right;" id="reset" href="javascript:dc.filterAll(); foodsecurity.filter(2015); dc.redrawAll();">Reset All</a> &nbsp; &nbsp;
+							<a class="reset btn btn-primary btn-sm" style="float:right;" id="reset" href="assets/data/fundingD.csv">Download Data</a>&nbsp; &nbsp;&nbsp; &nbsp; -->
+                        </h1>
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+				 <div class="row" >
+				 <a class="btn btn btn-success" style="float:right; margin-bottom:20px; margin-right:10px;" href="javascript:void(0);" onclick="javascript:introJs().start();">Tutorial</a>
+				 <a class="reset btn btn-primary btn-sm" style="float:right; margin-bottom:20px; margin-right:10px;" id="reset" href="javascript:location.reload();">Reset All</a> &nbsp; &nbsp;
+							<a class="reset btn btn-primary btn-sm" style="float:right; margin-bottom:20px; margin-right:10px; " id="reset" href="assets/data/ACLEDB2.txt">Download Data</a>&nbsp; &nbsp;&nbsp; &nbsp;
+							
+                    </div>
+					<div class="row">
+					
+                   
+					
+                </div>
+             
+			 
+				
+				<div class="row">				
+					
+					<div class="col-md-5 col-sm-6 col-xs-12" data-step="1" data-intro="Map showing conflict incidences in Burundi from 1st January 2015. you can zoom in or out or click on the bubbles to interact with the data " data-position="right">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Map of Occurences of Violence
+                            </div>
+                            <div class="panel-body">
+                                <div id="demo1"><div class="map" style="width:380px; height:465px;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-md-7 col-sm-6 col-xs-12" >
+					
+					<div class="col-md-4 col-sm-12 col-xs-12" data-step="2" data-intro="Total number of violent events since January 2015" data-position="bottom">
+                        <div class="panel panel-primary text-center no-boder bg-color-green">
+                            <div class="panel-body">
+                                <!-- <i class="fa fa-bar-chart-o fa-2x"></i> --> 
+                                <div  id="occurences" style="text-align:middle;">
+								<h3><span class="filter-count"></span></h3></div>
+                            </div>
+                            <div class="panel-footer back-footer-green"> <div class = "smallfont">
+                                Occurences
+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12" data-step="3" data-intro="Total number of fatalities since January 2015" data-position="bottom">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <span class="fa fa-shopping-cart fa-5x"></span> -->
+                                <div  id="fatalities">
+								<h3><span class="filter-count"></span></h3></div>  
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                              <div class = "smallfont"> Fatalities</div>
+
+                            </div>
+                        </div>
+                    </div>
+					
+					<div class="col-md-4 col-sm-12 col-xs-12" data-step="4" data-intro="Total violent interactions since January 2015" data-position="bottom">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <span class="fa fa-shopping-cart fa-5x"></span> -->
+                                <div  id="interaction">
+								<h3><span class="filter-count"></span></h3></div>  
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                              <div class = "smallfont"> Interactions</div>
+
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-md-6 col-sm-6 col-xs-12" data-step="5" data-intro="Chart showing the type of violence. You can click on the chart to interact with the data" data-position="left">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Type of Violence								
+                            </div>
+                            <div class="panel-body">
+                                <div class="pie">
+								</div>
+								<!-- <div id="timefilter"></div> -->
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-md-6 col-sm-6 col-xs-12" data-step="6" data-intro="Chart showing the media houses that are leading in the reporting of the conflict events since they started" data-position="left">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Reported By								
+                            </div>
+                            <div class="panel-body">
+                                <div class="row2">
+								</div>
+								<!-- <div id="timefilter"></div> -->
+                            </div>
+                        </div>
+                    </div>
+					
+					
+					</div>
+
+
+
+					
+				 </div> 
+					 
+				 
+					 
+					 
+				<div class="row">	
+					<div class="col-md-12 col-sm-6 col-xs-12" data-step="7" data-intro="The general trend in conflict aggregated by month. Adjust the brush to interact with the data" data-position="top">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Conflict trend by month 
+                            </div>
+                            <div class="panel-body">
+                                <div class="row1"></div>
+								
+                            </div>
+                        </div>
+                    </div>
+					
+					
+                     </div> 
+                
+            
+				
+			   
+
+    </div>
+
+
+              
+    </div>
+	<div class="fluid-container">
+		<footer class="site-footer">
+			<a href="#" class="back-to-top">
+				<i class="fa fa-angle-up"></i>
+			</a>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-left-0">
+					<p class="copyright">Humanitarian Dashboard: <a href="http://ea.humanitarianresponse.info" target="_parent">UNOCHA - EASTERN AFRICA</a></p>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-right-0">
+					<ul class="social">
+						<!-- <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i> Youtube</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+  
+</div>
+
+
+	<script src="assets/js/plugins.js"></script>
+	
+		
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/d3.tip.min.js"></script>
+		<script type="text/javascript" src="assets/js/intro.js"></script>
+
+<script type="text/javascript" src="assets/js/d3.js"></script>
+<script type="text/javascript" src="assets/js/crossfilter.js"></script>
+<script type="text/javascript" src="assets/js/dc.js"></script>
+<script type="text/javascript" src="assets/js/leaflet.js"></script>
+
+<!--Optional-->
+<script type="text/javascript" src="assets/js/leaflet.markercluster.js"></script>
+
+<script type="text/javascript" src="assets/js/dc.leaflet.js"></script>
+
+<script type="text/javascript" src="assets/js/d3.min3.js"></script>
+<script type="text/javascript" src="assets/app/burundi_conflict.js"></script>
+
+
+
+
+
+
+
+	
+</body>
+</html>

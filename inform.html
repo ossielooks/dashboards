@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<meta charset="utf-8">
+	<title>OCHA ROEA</title>
+	
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/templatemo-style.css">
+	<link href="assets/css/custom-styles.css" rel="stylesheet" />
+	<link href="assets/css/introjs.css" rel="stylesheet" />
+	<link href="assets/css/dc.css" rel="stylesheet" />
+
+	<!-- jQuery -->
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+
+</head>
+<body>
+		
+	<!-- HEADER -->
+	<div class="fluid-container">
+		<header class="site-header">
+			<div class="navbar-default" ">
+				<div class="fluid-container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand" href="#"><img src="assets/img/ocha_logo.png" style="width:217px; " alt="Ocha"></img></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="link-service" href="index.html">DASHBOARD</a></li>
+						<li><a class="link-facts" class="active-menu" href="kenya-resilience.html">KENYA RESILIENCE</a></li>
+						<li><a class="link-portfolio" href="inform.html">INFORM</a></li>
+						<!-- <li><a class="link-clients" href="#clients">Clients</a></li>
+						<li><a class="link-contact" href="#contact">Contact</a></li> -->
+					</ul>
+				</div>
+				</div>
+			</div>
+		</header> <!-- .site-header -->
+	</div> <!-- .fluid-container -->
+	
+	<!-- WELCOME TEXT -->
+	<div class="main-content">
+	<div class="fluid-container">
+		<div class="section-welcome">
+			 <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            INFORM <small>HAZARDS VULNERABILITIES AND  LACK OF COPING CAPACITY OF EASTERN AFRICA</small>
+                        </h1>
+						 <a class="btn btn btn-success" style="float:right; margin-top:-20px; margin-right:10px;" href="javascript:void(0);" onclick="javascript:introJs().start();">Tutorial</a>
+			
+							<a class="reset btn btn-primary btn-sm" style="float:right; margin-top:-20px; margin-right:10px; " id="reset" href="assets/data/inform_sub_national.csv">Download Data</a>&nbsp; &nbsp;&nbsp; &nbsp;
+                    </div>
+                </div> 
+                 <!-- /. ROW  -->
+                                 
+            <div class="row">
+                <div class="col-md-6 col-sm-4" data-step="1" data-intro="Hazards for the region at the sub national level, the scale is from 0-10. On mouse hover over the map, you get to see the name and hazard value of the location " data-position="right">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Hazards 
+                        </div>
+                        <div class="panel-body">
+                            <div id="hazards"></div>
+                        </div>
+                        <div class="panel-footer">
+                            Hazards 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-4" data-step="2" data-intro="Vulnerabilities for the region at the sub national level, the scale is from 0-10. On mouse hover over the map, you get to see the name and Vulnerability value of the location " data-position="left">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" >
+                            Vulnerabilities 
+                        </div>
+                        <div class="panel-body">
+                            <div id="vulnerability"></div>
+                        </div>
+                        <div class="panel-footer">
+                            Vulnerability 
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+                   <!-- /. ROW  -->
+             <div class="row">
+                
+				<div class="col-md-6 col-sm-4" data-step="3" data-intro="Lack of coping capacity for the region at the sub national level, the scale is from 0-10. On mouse hover over the map, you get to see the name and Lack of coping capacity value of the location " data-position="right">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Lack of Coping Capacity 
+                        </div>
+                        <div class="panel-body">
+                            <div id="coping-capacity"></div>
+                        </div>
+                        <div class="panel-footer">
+                            Lack of Coping Capacity 
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="col-md-6 col-sm-4" data-step="4" data-intro="Humanitarian Risk for the region at the sub national level, the scale is from 0-10. On mouse hover over the map, you get to see the name and Humanitarian Risk value of the location " data-position="left">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Overall Risk
+                        </div>
+                        <div class="panel-body">
+                            <div id="inform"></div>
+                        </div>
+                        <div class="panel-footer">
+                           Overall Risk
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+		</div>
+	</div>
+
+	
+	
+
+	<!-- FOOTER -->
+	<div class="fluid-container">
+		<footer class="site-footer">
+			<a href="#" class="back-to-top">
+				<i class="fa fa-angle-up"></i>
+			</a>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-left-0">
+					<p class="copyright">Humanitarian Dashboard: <a href="http://ea.humanitarianresponse.info" target="_parent">UNOCHA - EASTERN AFRICA</a></p>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-right-0">
+					<ul class="social">
+						<li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i> Youtube</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+	</div>
+	
+
+	<!-- Plugins -->
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/custom.js"></script>
+		<script src="assets/js/jquery-ui.min.js"></script> 
+		<script type="text/javascript" src="assets/js/d3.min.js"></script>
+		<script type="text/javascript" src="assets/js/crossfilter.js"></script>
+		<script type="text/javascript" src="assets/js/dc.js"></script>
+		<script type="text/javascript" src="assets/js/d3.tip.min.js"></script>
+		
+		<script type="text/javascript" src="assets/js/intro.js"></script>
+		<script type="text/javascript" src="assets/app/inform.js"></script>>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/intro.js"></script>
+	
+    
+
+</body>
+</html>

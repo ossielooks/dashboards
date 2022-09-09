@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<meta charset="utf-8">
+	<title>OCHA ROEA</title>
+	
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/templatemo-style.css">
+	<link href="assets/css/custom-styles.css" rel="stylesheet" />
+	<link href="assets/css/introjs.css" rel="stylesheet" />
+	<link href="assets/css/dc.css" rel="stylesheet" />
+
+	<!-- jQuery -->
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="assets/js/jquery.metisMenu.js"></script>
+</head>
+<body>
+		
+	<!-- HEADER -->
+	<div class="fluid-container">
+		<header class="site-header">
+			<div class="navbar-default">
+				<div class="fluid-container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand" href="#"><img src="assets/img/ocha_logo.png" style="width:217px; " alt="Ocha"></img></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a class="link-service" href="index.html">DASHBOARD</a></li>
+						<li><a class="link-facts" class="active-menu" href="kenya-resilience.html">KENYA RESILIENCE</a></li>
+						<li><a class="link-portfolio" href="inform.html">INFORM</a></li>
+						<!-- <li><a class="link-clients" href="#clients">Clients</a></li>
+						<li><a class="link-contact" href="#contact">Contact</a></li> -->
+					</ul>
+				</div>
+				</div>
+			</div>
+		</header> <!-- .site-header -->
+	</div> <!-- .fluid-container -->
+	
+	<!-- WELCOME TEXT -->
+	<div class="main-content">
+	<div class="fluid-container">
+		<div class="section-welcome">
+			<div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Dashboard: <small>Kenya Resilience Investments</small>
+                        </h1>
+						 <a class="btn btn btn-success" style="float:right; margin-top:-20px; margin-right:10px;" href="javascript:void(0);" onclick="javascript:introJs().start();">Tutorial</a>
+				 <a class="reset btn btn-primary btn-sm" style="float:right; margin-top:-20px; margin-right:10px;" id="reset" href="javascript:dc.filterAll();  dc.redrawAll();">Reset All</a> &nbsp; &nbsp;
+							<a class="reset btn btn-primary btn-sm" style="float:right; margin-top:-20px; margin-right:10px; " id="reset" href="assets/data/resilience.csv">Download Data</a>&nbsp; &nbsp;&nbsp; &nbsp;
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12" data-step="1" data-intro="Total number of projects contributing to resilience recorded in the database see <a href=kenya.droughtresilience.info> Kenya Resilience investments tracker portal</a>" data-position="right">
+                        <div class="panel panel-primary text-center no-boder bg-color-green">
+                            <div class="panel-body">
+                                <!-- <i class="fa fa-bar-chart-o fa-5x"></i> -->
+                                <h3>118</h3>
+                            </div>
+                            <div class="panel-footer back-footer-green">
+                                Projects
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12" data-step="2" data-intro="Total funding of the Resilience projects" data-position="right">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <span class="fa fa-shopping-cart fa-5x"></span> -->
+                               <span> <h3>2,230 </h3> </span>
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                               Budget (Million $)
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12" data-step="3" data-intro="Total number of funding sources/donors" data-position="right">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <i class="fa fa fa-comments fa-5x"></i> -->
+                                <h3>18 </h3>
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                                Donors
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12" data-step="4" data-intro="Total number of implementing partners" data-position="left">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <!-- <i class="fa fa-users fa-5x"></i> -->
+                                <h3>40 </h3>
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                                Partners
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               			
+							
+				<div class="row">
+
+					<div class="col-md-6 col-sm-6 col-xs-12" data-step="5" data-intro="Map of Kenya showing admin level 1 (counties). the bubbles represent the amount of funding going into building resilience" data-position="right">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Map of Kenya
+                            </div>
+                            <div class="panel-body">
+                                <div id="ca-chart" class="dc-chart">
+								<span class="reset" style="display: none;">Current filter: <span class="filter"></span></span>
+								<svg height="600px" width="600px"></svg>
+								
+								</div>
+								<a class="reset" href="javascript:caChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+					<div class="col-md-3 col-sm-6 col-xs-12" >
+                        <div class="panel panel-default" data-step="6" data-intro="Pie showing the distribution of the budget into the different priority intervention areas(pillars)" data-position="right">
+                            <div class="panel-heading">
+                                Sector by Budget
+                            </div>
+                            <div class="panel-body">
+                                <div id="function-pie-chart"><span class="reset" style="display: none;">Current filter: <span class="filter"></span></span></div>
+								<a class="reset" href="javascript:roundChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                            </div>
+                        </div>
+						
+						
+						<div class="panel panel-default" data-step="7" data-intro="Implementation status of projects by budget. the three status is Planned, Ongoing and Completed" data-position="left">
+                            <div class="panel-heading">
+                                Status By Budget 
+                            </div>
+                            <div class="panel-body">
+                                <div id="statusByBudgetPieChart"><span class="reset" style="display: none;">Current filter: <span class="filter"></span></span></div>
+								<a class="reset" href="javascript:roundChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                            </div>
+                        </div>
+						
+                    </div>
+					
+					<div class="col-md-3 col-sm-12 col-xs-12" >
+                        <div class="panel panel-default" data-step="8" data-intro="Funding by donor chart " data-position="left">
+                            <div class="panel-heading">
+                                Funding by donor
+                            </div>
+                            <div class="panel-body">
+                                <div id="donor-chart"><span class="reset" style="display: none;">Current filter: <span class="filter"></span></span></div>
+								<a class="reset" href="javascript:roundChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                            </div>
+                        </div>
+						
+						<div class="panel panel-default" data-step="9" data-intro="Implementing partners by number of activities in counties chart." data-position="left">
+                            <div class="panel-heading">
+                                Implementing Partners
+                            </div>
+                            <div class="panel-body">
+                                <div id="implementing-chart"><span class="reset" style="display: none;">Current filter: <span class="filter"></span></span></div>
+								<a class="reset" href="javascript:roundChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+                            </div>
+                        </div>
+						
+						
+                    </div>
+					
+					
+
+                </div>
+				
+				
+                <!-- /. ROW  -->
+
+                <div class="row">
+                    
+					
+					
+					<div class="col-md-12 col-sm-12 col-xs-12" data-step="10" data-intro="List of projects " data-position="left">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                List of Projects
+                            </div> 
+					
+					
+					<table class="table table-striped table-bordered table-hover" id="dc-data-table">
+			 
+                <thead>
+                <tr class="header">
+                    <th>SECTOR <span class="reset" style="display: none;">Current filter: <span class="filter"></span></span>
+                <a class="reset" href="javascript:dc.dataTable.filterAll();dc.redrawAll();" style="display: none;">reset</a></th>
+                    <th>DONOR <span style="font-size: 11px"></span></th>
+                    <th>AMOUNT</th>
+					<th>IMPLEMENTING</th>
+					<th>STATUS</th>
+					<th>COUNTY</th>
+					</tr>
+                </thead>
+				</table>
+				
+				
+				</div>
+				</div>
+				
+				
+				
+                   
+                </div>
+				</div>
+		</div>
+	</div>
+
+	
+	
+
+	<!-- FOOTER -->
+	<div class="fluid-container">
+		<footer class="site-footer">
+			<a href="#" class="back-to-top">
+				<i class="fa fa-angle-up"></i>
+			</a>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-left-0">
+					<p class="copyright">Humanitarian Dashboard: <a href="http://ea.humanitarianresponse.info" target="_parent">UNOCHA - EASTERN AFRICA</a></p>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 padding-right-0">
+					<ul class="social">
+						<li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i> Youtube</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+	</div>
+	
+
+	<!-- Plugins -->
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/custom.js"></script>
+		<script src="assets/js/jquery-ui.min.js"></script> 
+		<script type="text/javascript" src="assets/js/d3.min.js"></script>
+		<script type="text/javascript" src="assets/js/crossfilter.js"></script>
+		<script type="text/javascript" src="assets/js/dc.js"></script>
+		<script type="text/javascript" src="assets/js/d3.tip.min.js"></script>
+		<script type="text/javascript" src="assets/app/ke_resilience.js"></script>
+		<script type="text/javascript" src="assets/data/ke.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/intro.js"></script>
+	
+    
+
+</body>
+</html>
